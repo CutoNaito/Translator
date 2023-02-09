@@ -1,3 +1,7 @@
 {
-    "dog": "pes"
+    "dog": "pes",
+    "cat": "kocka",
+    "mouse": "myš",
+    "horse": "kůň",
+    "cow": "kráva"
 }
