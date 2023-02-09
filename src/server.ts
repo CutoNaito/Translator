@@ -15,6 +15,10 @@ const server = net.createServer((socket) => {
             socket.write('TRANSLATEDERR"Command not found"');
         }
     });
+    
+    socket.on('error', (err) => {
+        console.log(err);
+    });
 });
 
 server.listen(process.env.PORT, () => {
