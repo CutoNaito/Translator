@@ -1,7 +1,8 @@
 import net from 'net';
 import "dotenv/config";
+import { FileLog } from '../src/commands/Logger';
 
-import { CommandController } from './commands/CommandController';
+import { CommandController } from '../src/commands/CommandController';
 
 if (process.env.PORT === undefined) {
     throw new Error('PORT is not defined');
@@ -19,10 +20,14 @@ const server = net.createServer((socket) => {
     });
 
     socket.on('error', (err) => {
-        console.log(err);
+        FileLog("Error: " + err);
+    });
+
+    socket.on('connection', () => {
+        FileLog("Connected to client from address: " + socket.remoteAddress);
     });
 });
 
-server.listen(process.env.PORT, () => {
-    console.log(`Server is listening on ${host}:${process.env.PORT}`);
+server.listen(parseInt(process.env.PORT), host, () => {
+    FileLog("Server started on address: " + host + ":" + process.env.PORT);
 });

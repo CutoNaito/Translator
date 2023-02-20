@@ -2,11 +2,11 @@
   "name": "alfa4",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "bin/server.ts",
   "scripts": {
-    "start": "ts-node src/server.ts",
-    "server": "nodemon src/server.ts",
-    "client": "nodemon src/client.ts"
+    "start": "ts-node bin/server.ts",
+    "server": "nodemon bin/server.ts",
+    "client": "nodemon bin/client.ts"
   },
   "keywords": [],
   "author": "",

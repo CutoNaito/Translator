@@ -1,8 +1,12 @@
-import { Ping, TRANSLATELOCL, TRANSLATESCAN } from "./TranslateCommands"
+import { TRANSLATEPING, TRANSLATELOCL, TRANSLATESCAN } from "./TranslateCommands"
 
 export function CommandController(data: string) {
-    if (data === "ping") {
-        return Ping()
+    if (data.includes("TRANSLATEPING")) {
+        try {
+            return TRANSLATEPING();
+        } catch (error) {
+            return 'TRANSLATEDERR"Connection failed"';
+        }
     }
 
     if (data.includes("TRANSLATELOCL")) {
