@@ -1,10 +1,5 @@
 # Translator
 
-Secondary school of electrotechnical engineering Jecna 30
-2022-2023
-Matěj Šturma
-C4c
-
 This is a TCP/IP Peer2Peer translator written in Node.js.
 
 Prerequisites
@@ -41,3 +36,10 @@ Server Commands
     1. `TRANSLATEPING` - Looks for another similar server running on the configured address. If found, returns `TRANSLATEPONG"Connection successful"`
     2. `TRANSLATELOCL"{word}"` - Looks for a translation of the word in the local dictionary. If found, returns `TRANSLATEDSUC"{translation}"`
     3. `TRANSLATESCAN"{word}"` - Scans the configured range of IP addresses and port numbers for a server that can translate the word. If found, returns `TRANSLATEDSUC"{translation}"`
+
+License
+
+/ Secondary school of electrotechnical engineering Jecna 30
+/ 2022-2023
+/ Matěj Šturma
+/ C4c
