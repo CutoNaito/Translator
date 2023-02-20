@@ -1,9 +1,9 @@
-Translator
+# Translator
 
-# Secondary school of electrotechnical engineering Jecna 30
-# 2022-2023
-# Matěj Šturma
-# C4c
+Secondary school of electrotechnical engineering Jecna 30
+2022-2023
+Matěj Šturma
+C4c
 
 This is a TCP/IP Peer2Peer translator written in Node.js.
 
